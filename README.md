@@ -6,6 +6,10 @@ I tend to play Fiasco online over Discord with Google Drawings keeping track of 
 
 This assumes players are honest and don't re-roll their dice. If they're not you've got bigger problems.
 
-This code is live at [http://ransomti.me/FiascoTools](ransomti.me/FiascoTools).
+This code is live at http://ransomti.me/FiascoTools.
 
 Barring bugs these are feature-complete quick web tools and I don't plan on adding anything else.
+
+You can buy the game Fiasco [here](https://bullypulpitgames.com/games/fiasco/).
+
+I release all the work in this repo into the public domain, do whatever you want with it.
