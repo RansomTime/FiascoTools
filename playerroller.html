@@ -1,0 +1,46 @@
+<html>
+<head><title>Fiasco Facilitator roller</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script>
+		var rollDice = function() {
+			return Math.floor(Math.random() * 6) + 1;
+		};
+
+		var roll = function() {
+			var total = 0;
+			var inputs = document.getElementsByTagName('input');
+			var nBlack = parseInt(inputs.nBlack.value);
+			var nWhite = parseInt(inputs.nWhite.value);
+			console.log(nBlack,nWhite);
+			for (var i = 0;  i < nWhite; i++) {
+				total += rollDice();
+			}
+			for (i = 0;  i < nBlack; i++) {
+				total -= rollDice();
+			}
+
+			var output = "";
+			if (total > 0) {
+				output = "White ";
+			} else if ( total < 0) {
+				output = "Black ";
+			}
+
+			output += Math.abs(total);
+
+			console.log(output);
+
+			document.getElementById("res").innerText = output;
+
+		};
+	</script>
+</head>
+<body>
+	<h1>Fiasco Player roller</h1>
+	<p>Number of black dice: <input type="number" id="nBlack" min="0" max="10"></p>
+	<p>Number of white dice: <input type="number" id="nWhite" min="0" max="10"></p>
+	<button style = "width: 100%; height:69px; font-size: 1.5em" onclick = "roll();">Roll</button>
+	<p id = "res"></p>
+</body>
+</html>
